@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.slabcode.unturno.Restaurant">
+
+    <LinearLayout
+        android:id="@+id/almuerzo"
+        android:layout_width="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#DCE775"
+        >
+
+        <TextView
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Almuerzo"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/almuerzo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="16dp">
+
+            <LinearLayout
+                android:id="@+id/entrda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Entrada"
+                    />
+
+
+                <Spinner
+                    android:id="@+id/entrada_values"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:entries="@array/entrada_arrays"
+                    android:prompt="@string/entrada_prompt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/principio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Principio"
+                    />
+
+                <Spinner
+                    android:id="@+id/principio_values"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:entries="@array/principio_arrays"
+                    android:prompt="@string/principio_prompt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/plato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Seco"
+                    />
+
+                <Spinner
+                    android:id="@+id/plato_values"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:entries="@array/plato_arrays"
+                    android:prompt="@string/plato_prompt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ensalada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Ensalada"
+                    />
+
+                <Spinner
+                    android:id="@+id/ensalda_values"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:entries="@array/ensalada_arrays"
+                    android:prompt="@string/ensalada_prompt" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/jugo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Jugo"
+                    />
+
+                <Spinner
+                    android:id="@+id/jugo_values"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:entries="@array/jugo_arrays"
+                    android:prompt="@string/jugo_prompt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/postre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Postre"
+                    />
+
+                <Spinner
+                    android:id="@+id/postre_values"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:entries="@array/postre_arrays"
+                    android:prompt="@string/postre_prompt" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/choose_turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elegir turno"
+                android:textSize="15sp"
+                android:textColor="@color/colorAccent"
+                android:background="@color/colorPrimary"
+                android:layout_marginBottom="32dp"
+                android:padding="8dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
